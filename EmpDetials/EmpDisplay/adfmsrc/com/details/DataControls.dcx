@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<DataControlConfigs xmlns="http://xmlns.oracle.com/adfm/configuration" version="12.2.1.12.24" id="DataControls"
+                    Package="com.details">
+  <AdapterDataControl id="Employees" FactoryClass="oracle.adf.model.adapter.DataControlFactoryImpl"
+                      ImplDef="oracle.adfinternal.model.adapter.webservice.WSDefinition" SupportsTransactions="false"
+                      SupportsSortCollection="false" SupportsResetState="false" SupportsRangesize="false"
+                      SupportsFindMode="false" SupportsUpdates="true" Definition="com.details.Employees"
+                      BeanClass="com.details.Employees" xmlns="http://xmlns.oracle.com/adfm/datacontrol">
+    <Source>
+      <definition xmlns="http://xmlns.oracle.com/adfm/adapter/webservice" name="Employees" version="1.0"
+                  provider="oracle.adfinternal.model.adapter.webservice.provider.soap.SOAPProvider"
+                  wsdl="employees\EmployeesService.wsdl" ensureKeyAttribute="true" useWSDLIdentity="true"
+                  dcStructureVersion="2" UsePersistedStructure="false">
+        <service name="EmployeesService" namespace="http://details.com/" connection="Employees">
+          <port name="EmployeesPort">
+            <operation name="getListOfEmps"/>
+          </port>
+        </service>
+      </definition>
+    </Source>
+  </AdapterDataControl>
+</DataControlConfigs>

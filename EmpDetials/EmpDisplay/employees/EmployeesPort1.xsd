@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:ns0="http://details.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://details.com/">
+  <xsd:complexType name="getListOfEmps"/>
+  <xsd:complexType name="getListOfEmpsResponse">
+    <xsd:sequence>
+      <xsd:element name="return" type="ns0:empBean" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="setListOfEmps">
+    <xsd:sequence>
+      <xsd:element name="arg0" type="ns0:empBean" minOccurs="0" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType name="setListOfEmpsResponse"/>
+  <xsd:complexType name="empBean">
+    <xsd:sequence>
+      <xsd:element name="empId" type="xsd:int"/>
+      <xsd:element name="empName" type="xsd:string" minOccurs="0"/>
+      <xsd:element name="salary" type="xsd:float"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="getListOfEmps" type="ns0:getListOfEmps"/>
+  <xsd:element name="getListOfEmpsResponse" type="ns0:getListOfEmpsResponse"/>
+  <xsd:element name="setListOfEmps" type="ns0:setListOfEmps"/>
+  <xsd:element name="setListOfEmpsResponse" type="ns0:setListOfEmpsResponse"/>
+</xsd:schema>
