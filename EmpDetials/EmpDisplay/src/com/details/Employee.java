@@ -15,10 +15,18 @@ public class Employee {
             private int commision;
             private int departmentId;
             private int managerId;
+	    private int Contact;
 
             public Employee() {
             }
+	    
+	    public int getContact() {
+                    return Contact;
+            }
 
+            public void setContact(int Contact) {
+                    this.Contact = Contact;
+            }
             public int getEmployeeId() {
                     return employeeId;
             }

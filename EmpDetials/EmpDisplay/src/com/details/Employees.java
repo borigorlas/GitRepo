@@ -14,7 +14,7 @@ public class Employees {
     //private List<Employee> listOfEmps=new ArrayList<Employee>();
     private EmpService empService;
     
-    public static Employees() {
+    public Employees() {
         super();
         empService=new EmpService();
         
